@@ -14,9 +14,10 @@ export default (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [messages, setMessages] = useState({ message: "", status: "" });
   const [modal, setModal] = useState(false)
-  const price = (cfForm.starting_bid / 1500)
   const [warning, setWarning] = useState(false)
 
+
+  //šios funkcijos atidarinėja delete ir edit lenteles//
   const openModal = () => {
     setModal(true)
   }
@@ -30,6 +31,8 @@ export default (props) => {
     setWarning(false)
   }
 
+
+  //Čia kreipemės į backend ir ištriname klausimą//
   const deleteNfts = () => {
     axios
       .delete(`/api/crowdfunder/delete/` + id)
@@ -46,6 +49,7 @@ export default (props) => {
       });
   }
 
+  //Čia iš backend su id ištraukiam info apie kiekvieną klausimą atskirai, kad nuėjus į edit langą rodytų to klausimo info//
   useEffect(() => {
     axios
       .get("/api/crowdfunder/single/" + id)
@@ -94,6 +98,8 @@ export default (props) => {
       });
       return false;
     }
+
+    //Čia siunčiame pakeistą klausimo info į backend//
     axios
       .put(`/api/crowdfunder/update/${id}`, cfForm)
       .then((resp) => {
@@ -119,8 +125,9 @@ export default (props) => {
             <div className="crowdFundEdit">
               <div className="nftInfoMain">
                 <div className="nftInfo">
-                  <h3 className="nftTitle">{cfForm.title}Crypto sukurimas</h3>
-                  <h3 className="nftCollection">{cfForm.collection}Kaip sukurti savo crypto?</h3>
+                  <h3 className="nftTitle">{cfForm.title}Quostion Title</h3>
+                  <hr className="line"></hr>
+                  <h5 className="nftCollection">{cfForm.collection}Quostion</h5>
                 </div>
               </div>
               <div className="nftEditDeleteBtn">

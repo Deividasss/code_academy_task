@@ -12,7 +12,7 @@ import MyNfts from './components/MyNfts/MyNfts'
 import NftsEdit from './components/NftsEdit/NftsEdit'
 
 export default () => {
-  const [isLoggedIn, setIsloggedIn] = useState(true);
+  const [isLoggedIn, setIsloggedIn] = useState(true); //Šioje eilutėje pakeite false galėsite peržiūrėti login ir register langus, nes būsite atsijunge//
   const [userRole, setUserRole] = useState(0);
   const [email, setEmail] = useState("");
   const [UserId, setUserId] = useState(0);
@@ -28,6 +28,7 @@ export default () => {
   //     }
   //   });
   // }, []);
+
 
   const handleLoginState = (
     loggedIn,

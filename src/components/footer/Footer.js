@@ -22,7 +22,7 @@ const Footer = () => {
                     </section>
                 </div>
                 <div class="text-center p-3">
-                    COPYRIGHT © NFT's Market, 2022
+                    COPYRIGHT © Crypto Forum, 2023
                 </div>
             </footer>
         </>

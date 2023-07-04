@@ -10,6 +10,8 @@ export default (props) => {
   const UserId = props.UserId;
   const navigate = useNavigate();
 
+  //Čia viskas panašu į login, irgi info iš formos sudedam į useState ir tada siunčiam į backend//
+
   const [cfForm, setcfForm] = useState({
     title: "",
     collection: "",
@@ -54,6 +56,7 @@ export default (props) => {
       form.append(data[0], data[1]);
     });
 
+    //Čia siunčiam info į backend//
     axios
       .post("/api/crowdfunder/create", form)
       .then((resp) => {

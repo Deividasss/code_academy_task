@@ -5,10 +5,11 @@ import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
-// import Registration from "../registration/Registration";
 
 export default (props) => {
   const navigate = useNavigate();
+
+  //Čia į useState patalpiname įrašytą info //
 
   const [loginForm, setLoginForm] = useState({
     email: "",
@@ -23,6 +24,7 @@ export default (props) => {
     });
   };
 
+  //Čia validationas, kur jei netinkamai užpildysi forma mes žinutę jog netinkamai užpildėte formą//
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!handleValidation()) {
@@ -33,6 +35,7 @@ export default (props) => {
       return false;
     }
 
+    //Čia backend perduodam įrašytus duomenis formoje ir tada tikrina ar toks useris yra užregistruotas, jei užregistruotas tada prijungia//
     axios
       .post("/api/users/login", loginForm)
       .then((resp) => {

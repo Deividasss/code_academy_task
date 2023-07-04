@@ -9,6 +9,8 @@ import Button from "react-bootstrap/esm/Button";
 export default () => {
   const navigate = useNavigate();
 
+  //Čia viskas labai panašu į Login, visus formoje surašytus duomenus įdedame į useState ir tada tą info nusiunčiame į backend//
+
   const [registerForm, setRegisterForm] = useState({
     first_name: "",
     last_name: "",
@@ -41,6 +43,8 @@ export default () => {
       return false;
     }
 
+
+    //Čia į backend nusiunčiam registracijos duomenis ir papostinam duombazėje
     axios
       .post("/api/users/register", registerForm)
       .then((resp) => {

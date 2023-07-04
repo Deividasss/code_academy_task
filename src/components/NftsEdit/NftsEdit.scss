@@ -2,6 +2,13 @@
     margin-top: 15%;
     text-align: center;
 }
+.nftInfo{
+    border: 2px solid rgb(132, 131, 131);
+    border-radius: 10px;
+    padding: 2%;
+    width: 70%;
+    margin: auto;
+}
 .nftEditDeleteBtn {
     margin-top: 5%;
 }
@@ -34,78 +41,7 @@
 .nftDeleteBtn:hover {
     background-color: #d32121;
 }
-.nftDescriptionTitle {
-    margin-top: 3%;
-    font-size: 20px;
-}
-.description {
-    margin-top: -28%;
-    width: 35%;
-}
-.nftDescription {
-    font-size: 15px;
-}
-.details {
-    margin-top: 40px;
-    width: 35%;
-}
-.nftDetails {
-    font-size: 20px;
-}
-.nftCreator {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.652);
-}
-.nftCreatorEmail {
-    float: right;
-    color: rgba(0, 0, 0, 0.773);
-}
-.nftNetwork {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.652);
-}
-.nftNetworkInfo {
-    float: right;
-    color: rgba(0, 0, 0, 0.773);
-}
-.nftCollection2 {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.652);
-}
-.nftCollectionInfo {
-    float: right;
-    color: rgba(0, 0, 0, 0.773);
-}
-.bidHistory {
-    margin: 0% 42.6%;
-    width: 50%;
-}
-.bidOffers {
-    margin: 2% 42.6%;
-    width: 50%;
-}
-.noItems {
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 5px;
-    padding: 20px 0;
-}
-.noItemsImg {
-    width: 60px;
-    margin-left: 295px;
-}
-.noItemsHeading {
-    font-size: 16px;
-    text-align: center;
-}
-.bidHistoryHeading {
-    font-size: 22px;
-}
-.bidOffersHeading {
-    font-size: 22px;
-}
-.bidInfo {
-    margin-top: 3%;
-}
+
 /*------------------------------------------------------ Edit Modal -----------------------------------------------------------------------------*/
 
 .editModal {

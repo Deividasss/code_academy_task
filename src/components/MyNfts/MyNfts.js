@@ -10,6 +10,8 @@ import { FaSearch } from 'react-icons/fa';
 
 export default (props) => {
   const [crowdFund, setCrowdFund] = useState([
+    //Jeigu prijungsite backend čia tada šitą žemiau esančią info ištrinkite ir palikite tusčią useState masyvą,//
+    // nes čia tokia hardcode info, kad puslapyje rodytų užduotus klausimus//
     {
       "title": "Kaip crypto parduoti brangiau?",
       "quostion": "Sveiki noriu paklausti kaip būtų galima parduoti crypto jog daugiau uždirbčiau",
@@ -24,6 +26,8 @@ export default (props) => {
   const [noCrowdfunders, setNoCrowdfunder] = useState(true);
   const [search, setSearch] = useState('')
   const navigate = useNavigate()
+
+  //Čia pagal userio id surandame jam priklausančius užduotus klausimus ir juos atvaizduoja, tai čia reiktu backend prijungti//
 
   useEffect(() => {
     axios
@@ -51,6 +55,9 @@ export default (props) => {
     setSearch(e.target.value)
   }
 
+  //Jeigu užduotų klausimų nėra tada išmes jog nera užduotu klausimu, o jei jų bus tada juos atvaizduos//
+  // galite pasibandyti ir ištrint tą klausimu info iš crowdFund useState kur paciam virsuj ir palikt tuscia masyvą, tada rodys jog nera//
+  //uzduotu klausimu//
   const List = () => {
     if (crowdFund.length < 1) {
       return (

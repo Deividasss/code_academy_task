@@ -10,6 +10,8 @@ export default (props) => {
 
   const navigate = useNavigate()
 
+  //Čia yra gaunama šiandienos data pagrindiniame puslapyje//
+
   const [dateState, setDateState] = useState(new Date());
   useEffect(() => {
     setInterval(() => setDateState(new Date()), 30000);

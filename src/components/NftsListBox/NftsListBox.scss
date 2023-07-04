@@ -38,6 +38,10 @@
     color: rgb(55, 55, 55);
     font-weight: 600;
 }
+.product-title:hover {
+    color: rgba(125, 123, 123, 0.589);
+    transform: scale(1.01);
+}
 .line {
     color: black;
 }
@@ -56,7 +60,7 @@
     font-weight: 200;
     font-size: 13px;
 }
-.product-grid .product-price-img{
+.product-grid .product-price-img {
     width: 25px;
     margin: 0 5px 2px 0;
 }
@@ -75,6 +79,18 @@
     font-size: 16px;
     font-weight: 600;
     padding-bottom: 10%;
+}
+.likeContainer{
+    display: flex;
+}
+.likesTitle{
+    margin: 0px 0 0 10px;
+}
+.likeBtn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 10px;
 }
 @media screen and (max-width: 990px) {
     .product-grid {
