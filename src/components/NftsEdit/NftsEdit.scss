@@ -1,0 +1,162 @@
+.nftEditMain {
+    margin-top: 15%;
+    text-align: center;
+}
+.nftEditDeleteBtn {
+    margin-top: 5%;
+}
+.nftEditBtn {
+    background-color: #a60d0d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 40px 12px 40px;
+    margin-right: 10px;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease 0s;
+}
+.nftEditBtn:hover {
+    background-color: #d32121;
+}
+.nftDeleteBtn {
+    background-color: #a60d0d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 40px 12px 40px;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease 0s;
+}
+.nftDeleteBtn:hover {
+    background-color: #d32121;
+}
+.nftDescriptionTitle {
+    margin-top: 3%;
+    font-size: 20px;
+}
+.description {
+    margin-top: -28%;
+    width: 35%;
+}
+.nftDescription {
+    font-size: 15px;
+}
+.details {
+    margin-top: 40px;
+    width: 35%;
+}
+.nftDetails {
+    font-size: 20px;
+}
+.nftCreator {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.652);
+}
+.nftCreatorEmail {
+    float: right;
+    color: rgba(0, 0, 0, 0.773);
+}
+.nftNetwork {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.652);
+}
+.nftNetworkInfo {
+    float: right;
+    color: rgba(0, 0, 0, 0.773);
+}
+.nftCollection2 {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.652);
+}
+.nftCollectionInfo {
+    float: right;
+    color: rgba(0, 0, 0, 0.773);
+}
+.bidHistory {
+    margin: 0% 42.6%;
+    width: 50%;
+}
+.bidOffers {
+    margin: 2% 42.6%;
+    width: 50%;
+}
+.noItems {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    padding: 20px 0;
+}
+.noItemsImg {
+    width: 60px;
+    margin-left: 295px;
+}
+.noItemsHeading {
+    font-size: 16px;
+    text-align: center;
+}
+.bidHistoryHeading {
+    font-size: 22px;
+}
+.bidOffersHeading {
+    font-size: 22px;
+}
+.bidInfo {
+    margin-top: 3%;
+}
+/*------------------------------------------------------ Edit Modal -----------------------------------------------------------------------------*/
+
+.editModal {
+    padding: 5%;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+}
+.editNftHeading {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.editBtn {
+    background-color: #a60d0d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 40px 12px 40px;
+    margin-top: 2%;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease 0s;
+}
+.editBtn:hover {
+    background-color: #d32121;
+}
+.deleteModal {
+    padding: 6% 4%;
+    text-align: center;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+}
+.deleteModalHeading {
+    font-size: 20px;
+    margin-top: 2%;
+}
+.deleteModalBtn {
+    background-color: #a60d0d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 40px 12px 40px;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    margin-top: 2%;
+    transition: all 0.5s ease 0s;
+}
+.deleteModalBtn:hover {
+    background-color: #d32121;
+}
