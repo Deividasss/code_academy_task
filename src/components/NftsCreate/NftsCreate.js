@@ -10,11 +10,15 @@ export default (props) => {
   const UserId = props.UserId;
   const navigate = useNavigate();
 
-  //Čia viskas panašu į login, irgi info iš formos sudedam į useState ir tada siunčiam į backend//
-
   const [cfForm, setcfForm] = useState({
     title: "",
     collection: "",
+    starting_bid: "",
+    cf_image: "",
+    network: "",
+    description: "",
+    approved: 0,
+    success: 0,
     UserId: UserId,
   });
 
@@ -45,7 +49,7 @@ export default (props) => {
     console.log(cfForm);
     if (!handleValidation()) {
       setMessages({
-        message: "Quostion form filled incorrectly",
+        message: "NFT creation form filled incorrectly",
         status: "danger",
       });
       return false;
@@ -56,7 +60,6 @@ export default (props) => {
       form.append(data[0], data[1]);
     });
 
-    //Čia siunčiam info į backend//
     axios
       .post("/api/crowdfunder/create", form)
       .then((resp) => {
@@ -78,33 +81,85 @@ export default (props) => {
         {messages.message && (
           <Alert variation={messages.status}>{messages.message}</Alert>
         )}
-        <h1 className="createNftHeader">Ask Quostion</h1>
+        <h1 className="createNftHeader">Create an NFT</h1>
         <hr></hr>
-        <form onSubmit={handleSubmit}>
+        <form className="ui form" onSubmit={handleSubmit}>
           <div className="createNftForm">
-            <div className="field mb-5">
-              <label className="form-label">Title</label>
+            <div className="field mb-4">
+              <label className="form-label">Name *</label>
               <input
                 type="text"
                 name="title"
                 className="form-control"
-                placeholder="Write quostion title"
+                placeholder="E.g This is a title"
                 value={cfForm.title}
                 onChange={handleInputChange}
               />
             </div>
             <div className="field mb-3">
-              <label className="form-label">Quostion</label>
+              <label className="form-label">Collection *</label>
               <input
                 type="text"
                 name="collection"
                 className="form-control"
-                placeholder="Write your quostion"
+                placeholder="Collection"
                 value={cfForm.collection}
                 onChange={handleInputChange}
               />
             </div>
-            <button className="createNftBtn2" type="submit">Submit</button>
+            <div className="field mb-3">
+              <label className="form-label">Price *</label>
+              <input
+                type="text"
+                name="starting_bid"
+                className="form-control"
+                placeholder="Price"
+                value={cfForm.starting_bid}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="field mb-3">
+              <label className="form-label">Import Image, Video or Audio *</label>
+              <input
+                type="file"
+                name="cf_image"
+                className="form-control"
+                onChange={(e) =>
+                  setcfForm({
+                    ...cfForm,
+                    [e.target.name]: e.target.files[0],
+                  })
+                }
+              />
+            </div>
+            <div className="field mb-3">
+              <label className="form-label">Network *</label>
+              <select
+                className="form-control"
+                rows="3"
+                name="network"
+                placeholder="Enter Network"
+                value={cfForm.network}
+                onChange={handleInputChange}
+              >
+                <option>-</option>
+                <option>BSC</option>
+                <option>ETH</option>
+              </select>
+            </div>
+            <div className="field mb-3">
+              <label className="form-label">Description *</label>
+              <textarea
+                type="text"
+                name="description"
+                className="formInput"
+                placeholder="Enter a description here"
+                value={cfForm.description}
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <button className="createNftBtn2" type="submit">Create</button>
           </div>
         </form>
       </div>

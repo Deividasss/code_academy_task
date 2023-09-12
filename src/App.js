@@ -8,8 +8,8 @@ import Login from "./components/login/Login";
 import Homepage from "./components/Homepage/Homepage.js";
 import Footer from "./components/footer/Footer";
 import NftsCreate from './components/NftsCreate/NftsCreate'
-import MyNfts from './components/MyNfts/MyNfts'
 import NftsEdit from './components/NftsEdit/NftsEdit'
+import NftsMarket from "./components/nftsMarket/NftsMarket";
 
 export default () => {
   const [isLoggedIn, setIsloggedIn] = useState(true); //Šioje eilutėje pakeite false galėsite peržiūrėti login ir register langus, nes būsite atsijunge//
@@ -74,7 +74,7 @@ export default () => {
           {isLoggedIn && (
             <Route
               path="/mycrowdfunders"
-              element={<MyNfts UserId={UserId} />}
+              element={<NftsMarket UserId={UserId} />}
             />
           )}
         </Routes>

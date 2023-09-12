@@ -27,12 +27,12 @@ export default (props) => {
       </Link>
       {props.loggedIn === true && props.userRole === 0 && (
         <Link className="personalNftsBtn" to="/myCrowdfunders">
-          Asked Quostions
+          Created NFTS
         </Link>
       )}
       {props.loggedIn === true && props.userRole === 0 && (
         <Link className="createNftBtn" to="/createCrowdFounding">
-          Ask Quostion
+          Create NFT
         </Link>
       )}
       <div className="headerInfo">
